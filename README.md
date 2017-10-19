@@ -23,9 +23,9 @@ Google Tessart,Monkey Script
 ```
 
 ### Usage
-`
-30초 마다 Alaram Service를 활용하여 IntentService를 호출
-`
+
+>30초 마다 Alaram Service를 활용하여 IntentService를 호출
+
 #### Intent Service
 
 ##### 현재화면 스크린샷
