@@ -31,13 +31,13 @@ Google Tessart,Monkey Script
 ##### 현재화면 스크린샷
 ```
 Process sh = Runtime.getRuntime().exec("su", null, null);
-			OutputStream os = sh.getOutputStream();
-			os.write(("/system/bin/screencap -p " + "/sdcard/img.png")
-					.getBytes());
-			os.flush();
+OutputStream os = sh.getOutputStream();
+os.write(("/system/bin/screencap -p " + "/sdcard/img.png")
+        .getBytes());
+os.flush();
 
-			os.close();
-			sh.waitFor();
+os.close();
+sh.waitFor();
 ```
 
 ##### TessArt library를 사용하여 Image를 Test Parsing
