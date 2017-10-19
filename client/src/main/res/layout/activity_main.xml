@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.swkim.dungeon.MainActivity" >
+
+    <Button
+        android:id="@+id/btn_imageCrop001"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="29dp"
+        android:text="001" />
+
+    <ImageView
+        android:id="@+id/imgv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_imageCrop001"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="54dp"
+        android:layout_toRightOf="@+id/btn_imageCrop001"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txtv_crop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_imageCrop001"
+        android:layout_alignBottom="@+id/btn_imageCrop001"
+        android:layout_alignLeft="@+id/imgv_main"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="시작" />
+
+    <Button
+        android:id="@+id/btn_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_start"
+        android:layout_alignBottom="@+id/btn_start"
+        android:layout_alignRight="@+id/txtv_crop"
+        android:text="서비스종료" />
+
+    <EditText
+        android:id="@+id/edt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_start"
+        android:layout_alignLeft="@+id/btn_start"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="30" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edt_time"
+        android:layout_alignRight="@+id/btn_start"
+        android:text="알람 시간" />
+
+</RelativeLayout>

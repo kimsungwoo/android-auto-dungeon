@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.swkim.autodungeon">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+
+    <application
+        android:name="com.swkim.dungeon.CommApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.swkim.dungeon.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.swkim.dungeon.service.MainService">
+            <intent-filter>
+                <action android:name="MainService" />
+            </intent-filter>
+        </service>
+        <service android:name="com.swkim.dungeon.service.ProcessService">
+            <intent-filter>
+                <action android:name="ProcessService" />
+            </intent-filter>
+        </service>
+        <service android:name="com.swkim.dungeon.service.DummyService">
+            <intent-filter>
+                <action android:name="DummyService" />
+            </intent-filter>
+        </service>
+
+
+        <!-- Receiver -->
+        <receiver android:name="com.swkim.dungeon.receiver.SWReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <!-- <data android:scheme="package" /> -->
+            </intent-filter>
+        </receiver>
+    </application>
+
+    <uses-sdk android:minSdkVersion="4" />
+
+</manifest>
